@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Book Store</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Set a font for the page */
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGJvb2t8ZW58MHx8fHwxNjg0MjY1NjY0&ixlib=rb-4.0.3&q=80&w=1080'); /* Background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            color: #fff; /* White text color */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+        }
+
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            padding: 30px; /* Padding inside the container */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+            width: 300px; /* Fixed width for the container */
+            text-align: center; /* Center text */
+        }
+
+        h2 {
+            margin-bottom: 20px; /* Space below the heading */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%; /* Full width */
+            padding: 10px; /* Padding inside input fields */
+            margin: 10px 0; /* Margin above and below input fields */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+        }
+
+        input[type="submit"] {
+            background-color: #3498db; /* Blue background for the button */
+            color: white; /* White text color */
+            border: none; /* Remove default border */
+            padding: 10px; /* Padding inside the button */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+
+        .register-link {
+            margin-top: 15px; /* Space above the link */
+            color: #fff; /* White text color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .register-link:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Book Store</h2>
+        <form action="dashboard.html" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <a href="register.html" class="register-link">Don't have an account? Register here</a>
+    </div>
+</body>
+</html>
