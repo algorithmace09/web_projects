@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Pop-up Boxes and Functions</title>
+  <script>
+    // (a) Display current date in textbox
+    function displayDate() {
+      document.getElementById("dateBox").value = new Date().toLocaleString();
+    }
+
+    // (b) Factorial of a number using prompt and alert
+    function showFactorial() {
+      let n = parseInt(prompt("Enter a number to find factorial:"));
+      if (isNaN(n) || n < 0) {
+        alert("Please enter a valid non-negative number.");
+        return;
+      }
+      let factorial = 1;
+      for (let i = 1; i <= n; i++) {
+        factorial *= i;
+      }
+      alert("Factorial of " + n + " is: " + factorial);
+    }
+
+    // (c) Multiplication table from 1 to 10
+    function showMultiplicationTable() {
+      let n = parseInt(prompt("Enter a number to display its multiplication table:"));
+      if (isNaN(n)) {
+        alert("Please enter a valid number.");
+        return;
+      }
+      let result = "Multiplication Table of " + n + ":\n";
+      for (let i = 1; i <= 10; i++) {
+        result += n + " x " + i + " = " + (n * i) + "\n";
+      }
+      alert(result);
+    }
+
+    // (d) Confirm addition of another number
+    function confirmAddition() {
+      let n1 = parseFloat(prompt("Enter the first number:"));
+      if (isNaN(n1)) {
+        alert("Please enter a valid number.");
+        return;
+      }
+
+      let addMore = confirm("Do you want to add another number?");
+      if (addMore) {
+        let n2 = parseFloat(prompt("Enter the second number:"));
+        if (isNaN(n2)) {
+          alert("Invalid second number.");
+          return;
+        }
+        let sum = n1 + n2;
+        alert("The sum of " + n1 + " and " + n2 + " is: " + sum);
+      } else {
+        alert("You chose not to add another number. The number entered is: " + n1);
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>JavaScript Pop-up Examples</h2>
+
+  <!-- a) Display current date -->
+  <p><b>a)</b> Display current date:</p>
+  <input type="text" id="dateBox" readonly>
+  <button onclick="displayDate()">Display Date</button>
+
+  <hr>
+
+  <!-- b) Factorial -->
+  <p><b>b)</b> Calculate factorial using prompt:</p>
+  <button onclick="showFactorial()">Calculate Factorial</button>
+
+  <hr>
+
+  <!-- c) Multiplication Table -->
+  <p><b>c)</b> Show multiplication table using prompt:</p>
+  <button onclick="showMultiplicationTable()">Show Table</button>
+
+  <hr>
+
+  <!-- d) Confirm to add another number -->
+  <p><b>d)</b> Enter a number and optionally add another using confirm:</p>
+  <button onclick="confirmAddition()">Start Addition</button>
+
+</body>
+</html>
